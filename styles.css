@@ -1,0 +1,330 @@
+/* =========================================================
+   OmniMind — Original Pastel Palette
+   Fonts: Gravitas One (titles) | Cormorant (paragraphs)
+          Fascinate Inline (hero) | Quintessential (body/welcome)
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Gravitas+One&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400&family=Fascinate+Inline&family=Quintessential&display=swap');
+
+/* ── Global ── */
+.stApp {
+    background: radial-gradient(circle at 10% 20%, #F4EFF7 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, #F3E5EC 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, #FEFEFE 0%, transparent 100%);
+    background-color: #FEFEFE;
+    font-family: 'Quintessential', 'Cormorant', serif !important;
+    color: #565656 !important;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gravitas One', serif !important;
+    color: #565656 !important;
+}
+
+p, li, label {
+    font-family: 'Cormorant', serif !important;
+    font-size: 1.05rem;
+}
+
+div {
+    font-family: 'Quintessential', serif;
+}
+
+/* ── Sidebar ── */
+section[data-testid="stSidebar"] {
+    background-color: rgba(254, 254, 254, 0.7) !important;
+    backdrop-filter: blur(25px);
+    border-right: 1px solid rgba(214, 205, 209, 0.3);
+}
+
+section[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    gap: 0.5rem;
+}
+
+/* ── Login Card ── */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.auth-card {
+    background: #FEFEFE;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(86, 86, 86, 0.08);
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(214, 205, 209, 0.4);
+}
+
+.login-brand {
+    font-family: 'Macondo Swash Caps', cursive !important;
+    font-size: 2.6rem !important;
+    letter-spacing: 1px;
+}
+.login-brand .omni { color: #60a5fa !important; }
+.login-brand .mind { color: #c084fc !important; }
+
+.login-sub {
+    font-family: 'Quintessential', serif !important;
+    color: #9ca3af !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 28px !important;
+}
+
+/* ── Inputs ── */
+.stTextInput > div > div > input {
+    background: #FEFEFE !important;
+    border: 1px solid #D6CDD1 !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    color: #565656 !important;
+    height: 48px !important;
+    font-family: 'Cormorant', serif !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #B2A3A4 !important;
+    box-shadow: 0 0 0 3px rgba(178, 163, 164, 0.1) !important;
+}
+
+/* ── Primary Button ── */
+.primary-auth-btn > button {
+    background: #565656 !important;
+    color: #FEFEFE !important;
+    border: none !important;
+    border-radius: 12px !important;
+    height: 48px !important;
+    font-family: 'Gravitas One', serif !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+}
+
+.primary-auth-btn > button:hover {
+    background: #333333 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(86, 86, 86, 0.2) !important;
+}
+
+/* ── Secondary Button ── */
+.secondary-auth-btn > button {
+    background: transparent !important;
+    color: #565656 !important;
+    border: 1.5px solid #D6CDD1 !important;
+    border-radius: 12px !important;
+    height: 48px !important;
+    font-family: 'Gravitas One', serif !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+}
+
+.secondary-auth-btn > button:hover {
+    background: rgba(244, 239, 247, 0.5) !important;
+    border-color: #B2A3A4 !important;
+    transform: translateY(-2px);
+}
+
+/* ── Send Button (circular) ── */
+button[kind="primary"] {
+    border-radius: 50% !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    padding: 0 !important;
+    background: #565656 !important;
+    color: #FEFEFE !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.4rem !important;
+    transition: all 0.2s ease !important;
+}
+
+button[kind="primary"]:hover {
+    background: #333 !important;
+    transform: scale(1.05) !important;
+}
+
+/* ── Social Login ── */
+.social-login-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-line {
+    display: flex;
+    align-items: center;
+    color: #D6CDD1;
+    font-family: 'Quintessential', serif;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+.social-line::before, .social-line::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #D6CDD1;
+    margin: 0 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #D6CDD1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #FEFEFE;
+}
+
+.social-icon:hover {
+    background: #F4EFF7;
+    border-color: #B2A3A4;
+    transform: scale(1.1);
+}
+
+/* ── Chat Input Wrapper (Sticky Bottom) ── */
+div[data-testid="stVerticalBlockBorderWrapper"]:has(textarea) {
+    background-color: #FEFEFE !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(214, 205, 209, 0.6) !important;
+    padding: 12px 18px !important;
+    box-shadow: 0 10px 40px rgba(86, 86, 86, 0.05) !important;
+    transition: all 0.3s ease !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    bottom: 20px !important;
+    z-index: 999 !important;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"]:has(textarea):focus-within {
+    border-color: #B2A3A4 !important;
+    box-shadow: 0 -4px 50px rgba(86, 86, 86, 0.08) !important;
+}
+
+div[data-testid="stTextArea"] textarea {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #565656 !important;
+    min-height: 60px !important;
+    font-family: 'Cormorant', serif !important;
+    font-size: 1.05rem !important;
+    padding: 0px !important;
+    line-height: 1.6 !important;
+}
+
+div[data-testid="stTextArea"] textarea:focus {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* ── Sidebar Typography & Buttons ── */
+section[data-testid="stSidebar"] h2 {
+    font-family: 'Macondo Swash Caps', cursive !important;
+    font-size: 2.8rem !important;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+section[data-testid="stSidebar"] button {
+    border-radius: 10px !important;
+    font-family: 'Gravitas One', serif !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.2s ease !important;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* ── Sidebar Nice Boxes ── */
+section[data-testid="stSidebar"] [data-testid="stTextInput"],
+section[data-testid="stSidebar"] .stButton {
+    background: #FEFEFE;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(86, 86, 86, 0.05);
+    border: 1px solid rgba(214, 205, 209, 0.4);
+    margin-bottom: 12px;
+}
+section[data-testid="stSidebar"] .stButton > button {
+    margin: 0 !important;
+}
+
+/* ── Agent Outputs ── */
+.agent-box {
+    background: #FEFEFE;
+    border-radius: 16px;
+    padding: 24px 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(86, 86, 86, 0.08);
+    border: 1px solid rgba(214, 205, 209, 0.4);
+    transition: all 0.3s ease;
+}
+.agent-box:hover {
+    box-shadow: 0 8px 30px rgba(86, 86, 86, 0.12);
+    transform: translateY(-2px);
+}
+.agent-box h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #c084fc;
+    border-bottom: 2px solid #F4EFF7;
+    padding-bottom: 10px;
+}
+
+/* ── Audio Player Styling ── */
+audio {
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(86, 86, 86, 0.08);
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background: #FEFEFE;
+    outline: none;
+}
+audio::-webkit-media-controls-panel {
+    background-color: #FEFEFE;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+    background: #D6CDD1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #B2A3A4;
+}
+
+/* ── Hide Streamlit Chrome ── */
+#MainMenu { visibility: hidden; }
+footer    { visibility: hidden; }
+header[data-testid="stHeader"] { display: none !important; }
+header    { background: transparent !important; display: none !important; }
