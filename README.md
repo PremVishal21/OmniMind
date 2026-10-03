@@ -142,11 +142,7 @@ Try feeding OmniMind complex dilemmas to watch the multi-agent collective in act
 
 ---
 
-## 📄 License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for details.
-
----
 
 <p center>
   Made with ❤️ by <a href="https://github.com/PremVishal21">Prem Vishal</a>
